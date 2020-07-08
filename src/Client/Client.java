@@ -33,7 +33,13 @@ public class Client {
                 String msg = sc.nextLine();
                 out.println(msg);
             }
-      
+        } catch (IOException e){
+            e.printStackTrace();
+        } finally{
+            try{
+                socket.close();
+            }catch (IOException e){
+                e.printStackTrace();
             }
         }
     }
